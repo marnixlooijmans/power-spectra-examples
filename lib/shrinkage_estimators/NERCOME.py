@@ -13,7 +13,7 @@ def Q_func(s, X):
     # Calculate the number of unique combinations of selecting s from Ns columns and compare
     # to the maximum number of averaging that we want to do
     nr_col_combos = np.math.factorial(Ns) // (np.math.factorial(s) * np.math.factorial(Ns-s))
-    Nav_max = 10000 # SHOULD THIS DEPEND ON VALUE FOR Nd??
+    Nav_max = 100000 # SHOULD THIS DEPEND ON VALUE FOR Nd??
     Nav = int(np.amin([nr_col_combos, Nav_max])) # Take the mimimum of the two
 
     if Nav < nr_col_combos:
